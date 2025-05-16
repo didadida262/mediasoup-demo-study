@@ -6,7 +6,8 @@ if (window.location.hostname === 'test.mediasoup.org') {
     protooPort = 4444;
 }
 
-const hostname = window.location.hostname;
+// const hostname = window.location.hostname;
+const hostname = '192.168.0.7';
 const protocol = 'wss';
 
 // const hostname = 'v3demo.mediasoup.org'
@@ -15,6 +16,5 @@ const protocol = 'wss';
 export function getProtooUrl(params) {
     const query = qs.stringify(params);
 
-    // return `${protocol}://${hostname}:${protooPort}/?${query}`;
-    return `${protocol}://192.168.0.7:${protooPort}/?${query}`;
+    return `${protocol}://${hostname}:${protooPort}/?${query}`;
 }
