@@ -3,7 +3,7 @@ import qs from 'qs';
 let protooPort = 4443;
 
 if (window.location.hostname === 'test.mediasoup.org') {
-	protooPort = 4444;
+    protooPort = 4444;
 }
 
 const hostname = window.location.hostname;
@@ -13,7 +13,8 @@ const protocol = 'wss';
 // const protocol = 'ws'
 
 export function getProtooUrl(params) {
-	const query = qs.stringify(params);
+    const query = qs.stringify(params);
 
-	return `${protocol}://${hostname}:${protooPort}/?${query}`;
+    // return `${protocol}://${hostname}:${protooPort}/?${query}`;
+    return `${protocol}://192.168.0.7:${protooPort}/?${query}`;
 }
